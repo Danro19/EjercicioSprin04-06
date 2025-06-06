@@ -1,1 +1,0 @@
-# EjercicioSprin04-06

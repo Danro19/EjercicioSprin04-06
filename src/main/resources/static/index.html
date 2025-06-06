@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Funcionarios (API)</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Enlace al archivo CSS externo -->
+</head>
+<body>
+    <div class="container">
+        <h1>Gestión de Funcionarios</h1>
+
+        <!-- Área de Mensajes -->
+        <div id="messageArea"></div>
+
+        <!-- Formulario para Agregar y Editar Funcionario -->
+        <div class="form-area">
+            <h2>Formulario de Funcionario</h2>
+            <input type="hidden" id="funcionarioId">
+            <div>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" placeholder="Nombre completo">
+            </div>
+            <div>
+                <label for="cargo">Cargo:</label>
+                <input type="text" id="cargo" placeholder="Cargo del funcionario">
+            </div>
+            <div>
+                <label for="departamento">Departamento:</label>
+                <input type="text" id="departamento" placeholder="Departamento">
+            </div>
+            <div>
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" placeholder="Número de teléfono">
+            </div>
+            <button onclick="guardarFuncionario()">Guardar Funcionario</button>
+            <button onclick="limpiarFormulario()">Limpiar Formulario</button>
+        </div>
+
+        <!-- Área de Búsqueda -->
+        <div class="search-area">
+            <h2>Buscar Funcionarios</h2>
+            <input type="text" id="searchId" placeholder="Buscar por ID">
+            <button onclick="buscarPorId()">Buscar por ID</button>
+            <br>
+            <input type="text" id="searchNombre" placeholder="Buscar por Nombre">
+            <button onclick="buscarPorNombre()">Buscar por Nombre</button>
+            <br>
+            <input type="text" id="searchDepartamento" placeholder="Buscar por Departamento">
+            <button onclick="buscarPorDepartamento()">Buscar por Departamento</button>
+            <br>
+            <button onclick="cargarTodosLosFuncionarios()">Cargar Todos</button>
+        </div>
+
+        <!-- Tabla para Mostrar Funcionarios -->
+        <h2>Lista de Funcionarios</h2>
+        <table id="funcionariosTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Cargo</th>
+                    <th>Departamento</th>
+                    <th>Teléfono</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Las filas se agregarán aquí por JavaScript -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="scripts.js"></script> <!-- Enlace al archivo JavaScript externo -->
+</body>
+</html>
